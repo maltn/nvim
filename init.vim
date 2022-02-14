@@ -1,3 +1,9 @@
+if has("win64") || has("win32") || has("win16")
+  echo "Windows"
+else
+  echo substitute(system('uname'), '\n', '', '')
+endif
+
 source $HOME/.config/nvim/plug-manager.vim
 "source $HOME/.config/nvim/plug-config/coc.vim"
 
